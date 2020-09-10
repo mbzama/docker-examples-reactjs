@@ -28,8 +28,16 @@ Instructions for building docker image are specified in `Dockerfile`. Run `docke
 
 
 ## Create/Run docker container
-Run `docker run -p 9999:80 --name angular-app-container docker-examples-reactjs`
+Run `docker run -d -p 9999:80 --name reactjs-app-container docker-examples-reactjs`
+
+If you encounter this error-> docker: Error response from daemon: Conflict. The container name "/reactjs-app-container" is already in use by container "d46221f9f147f1881d3a19c728d70d60a9f70f4e3b54b96c7d865604d377e311". You have to remove (or rename) that container to be able to reuse that name.
+
+Remove the container using `docker rm -f reactjs-app-container`
 
 
 ## Create/Run docker container
 Navigate to `http://localhost:9999/`
+
+
+## To login to running container
+Run `docker exec -it reactjs-app-container sh` and inspect the files using regular linux commands such ls, cat .,
