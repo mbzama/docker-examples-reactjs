@@ -41,3 +41,28 @@ Navigate to `http://localhost:9999/`
 
 ## To login to running container
 Run `docker exec -it reactjs-app-container sh` and inspect the files using regular linux commands such ls, cat .,
+
+
+## Stop the docker containers
+Run `docker stop angular-app-container`
+
+
+## To run the app using docker-compose
+Run `docker-compose up -d`
+
+
+## To scale the containers or run multiple copies of the app
+Run `docker-compose scale web=3`. To verify run `docker ps` to view the active containers
+![alt text](https://github.com/mbzama/docker-examples-angular/blob/master/scale.png)
+
+
+## Accessing the app
+Navigate to `http://localhost:9002/`
+
+
+## Stop the docker containers
+Run `docker-compose stop`
+
+
+## Stop & remove the docker containers
+Run `docker-compose down`

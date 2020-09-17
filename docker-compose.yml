@@ -1,0 +1,9 @@
+web:
+  image: 'docker-examples-reactjs'
+
+loadbalancer:
+  image: 'dockercloud/haproxy:latest'
+  links:
+    - web
+  ports:
+    - '9002:80'
